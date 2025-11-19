@@ -15,9 +15,9 @@ print("test:",  x_test.shape,  y_test.shape)
 
 model = models.Sequential([
     layers.Input(shape=(784,)),                 # вход: 784 пикселя
-    layers.Dense(512, activation='relu'),       # скрытый слой 1: 512 нейронов и relu активация(кусочно-линейная)   
-    layers.Dense(256, activation='relu'),       # скрытый слой 2: 256 нейронов
-    layers.Dense(128, activation='relu'),       # скрытый слой 3: 128 нейронов
+    layers.Dense(512, activation='sigmoid'),       # скрытый слой 1: 512 нейронов и relu активация(кусочно-линейная)   
+    layers.Dense(256, activation='sigmoid'),       # скрытый слой 2: 256 нейронов
+    layers.Dense(128, activation='sigmoid'),       # скрытый слой 3: 128 нейронов
     layers.Dense(10, activation='softmax')      # выход: 10 классов
 ])
 
@@ -39,4 +39,4 @@ test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0)
 print("Точность на тесте:", test_acc)
 
 # Сохраняем модель в формате HDF5 (.h5)
-model.save("models/notmnist_mlp2.h5")
+model.save("models/notmnist_mlp4.h5")
