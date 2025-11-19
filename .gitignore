@@ -2,8 +2,8 @@
 *.tar.gz
 notMNIST_large/
 notMNIST_small/
-*.zip
 *.tar.gz
+*.npz
 *.log
 *.tmp
 *.bak
